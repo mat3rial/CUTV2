@@ -21,21 +21,18 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-require_once(__DIR__ . '/../vendor/autoload.php');
-(new \Dotenv\Dotenv(__DIR__.'/../'))->load();
 
-
-define('DB_NAME', getenv('DB'));
+define('DB_NAME', 'cutvdb');
 
 
 /** MySQL database username */
-define( 'DB_USER', getenv('USR'));
+define( 'DB_USER', 'root');
 
 /** MySQL database password */
-define( 'DB_PASSWORD', getenv('PW'));
+define( 'DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-define( 'DB_HOST', getenv('HOST'));
+define( 'DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
