@@ -1,6 +1,32 @@
 VideoPro - Release Log
 CactusThemes
 
+VideoPro 2.3.6.7 - 2020/01/20
+includes Cactus-Actor 1.1.4.2; Cactus-Ads 2.5.5.5; Cactus-Video 2.3.6.6;
+Advance Search Form 1.4.9.9; VideoPro Shortcode 1.3.4.7; VideoPro Unyson backup Extension 1.0.3; Visual Composer 6.1;
+#Update: Smooth scroll library
+#Update: Vidoe Thumbnail plugin
+#Fix: archive layout for single series page
+#Fix:  pagination for single series page
+#Fix: Meta data for post slider layout 7
+#Fix: Add header tag for 404 page
+#Fix: Add widget logic for recommended plugin
+#Fix: warning in cactus ads plugin
+#Fix: Add custom social account
+#Fix: shortcode series listing and channel listing
+#Fix: watch later issues when using custom order for playlist
+#Fix: Channel/Actor lisitng widget show incorrect number of videos
+#Fix: Warning in videopro shortcode plugin
+#Fix: using offset in Smart Content Box
+#Fix: Warning on PHP 7.1
+#Fix: Always requires update Cactus Ads plugin
+#Fix: Warning Advance Search form plugin
+#Fix: Warning for Unyson backup
+#Fix: Cactus Ads when auto play video
+#Fix: Warning undefined index for series in single video page
+#Fix: Dropcap shortcode on Dark Schema
+#Fix: Share video on Facebook, unable to play directly
+
 VideoPro 2.3.6.6 - 2019/10/01
 includes Cactus-Actor 1.1.4.0;
 #Update: Video Thumbnail plugins

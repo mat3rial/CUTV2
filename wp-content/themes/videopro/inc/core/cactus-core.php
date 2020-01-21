@@ -44,46 +44,51 @@ function videopro_acplugins($plugins) {
             'required' => false
         ),
         array(
+            'name' => 'Widget Logic',
+            'slug' => 'widget-logic',
+            'required' => false
+        ),
+        array(
             'name' => 'Cactus Video',
             'slug' => 'cactus-video',
             'source' => get_template_directory() . '/inc/plugins/plugins/cactus-video.zip',
             'required' => true,
-            'version' => '2.3.6.5'
+            'version' => '2.3.6.6'
         ),
         array(
             'name' => 'VideoPro - Shortcodes',
             'slug' => 'videopro-shortcodes',
             'source' => get_template_directory() . '/inc/plugins/plugins/videopro-shortcodes.zip',
             'required' => true,
-            'version' => '1.3.4.6'
+            'version' => '1.3.4.7'
         ),
         array(
             'name' => 'WPBakery Page Builder',
             'slug' => 'js_composer',
             'source' => get_template_directory() . '/inc/plugins/plugins/js_composer.zip',
             'required' => true,
-            'version' => '6.0.5'
+            'version' => '6.1'
         ),
         array(
             'name' => 'Advance Search Form',
             'slug' => 'advance-search-form',
             'source' => get_template_directory() . '/inc/plugins/plugins/extras/advance-search-form.zip',
             'required' => false,
-            'version' => '1.4.9.8'
+            'version' => '1.4.9.9'
         ),
         array(
             'name' => 'Cactus Actor',
             'slug' => 'cactus-actor',
             'source' => get_template_directory() . '/inc/plugins/plugins/extras/cactus-actor.zip',
             'required' => false,
-            'version' => '1.1.4.1'
+            'version' => '1.1.4.2'
         ),
         array(
             'name' => 'Cactus Ads',
             'slug' => 'cactus-ads',
             'source' => get_template_directory() . '/inc/plugins/plugins/extras/cactus-ads.zip',
             'required' => false,
-            'version' => '2.5.5.4'
+            'version' => '2.5.5.5'
         ),
         array(
             'name' => 'Cactus Badges',
@@ -111,14 +116,14 @@ function videopro_acplugins($plugins) {
             'slug' => 'videopro-unyson-backup-restore',
             'source' => get_template_directory() . '/inc/plugins/plugins/extras/videopro-unyson-backup-restore.zip',
             'required' => false,
-            'version' => '1.0.2'
+            'version' => '1.0.3'
         ),
         array(
             'name' => 'Video Thumbnails',
             'slug' => 'video-thumbnails',
             'required' => false,
             'source' => get_template_directory() . '/inc/plugins/plugins/extras/video-thumbnails.zip',
-            'version' => '2.12.3'
+            'version' => '2.12.4'
         ),
         array(
             'name' => 'Membership',

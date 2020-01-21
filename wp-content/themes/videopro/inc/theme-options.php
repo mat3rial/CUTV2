@@ -2319,3 +2319,40 @@
 		}
 
 	}
+
+add_filter('ot_list_item_settings', 'custom_social_account_list_item_settings', 10, 3);
+
+function custom_social_account_list_item_settings($value, $field_id)
+{
+    if ($field_id == 'custom_social_account') {
+        $value = array(
+            array(
+                'id' => 'icon_custom_social_account',
+                'label' => esc_html__('Font Awesome Icons', 'videopro'),
+                'desc' => esc_html__('Enter Font Awesome class (ex: fa-instagram)', 'videopro'),
+                'std' => '',
+                'type' => 'text',
+                'post_type' => '',
+                'taxonomy' => '',
+                'min_max_step' => '',
+                'class' => '',
+                'condition' => '',
+                'operator' => 'and',
+            ),
+            array(
+                'id' => 'url_custom_social_account',
+                'label' => esc_html__('URL', 'videopro'),
+                'desc' => esc_html__('Enter full link to your social account (including http)', 'videopro'),
+                'std' => '#',
+                'type' => 'text',
+                'post_type' => '',
+                'taxonomy' => '',
+                'min_max_step' => '',
+                'class' => '',
+                'condition' => '',
+                'operator' => 'and'
+            )
+        );
+    }
+    return $value;
+}

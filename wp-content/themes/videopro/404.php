@@ -4,6 +4,7 @@
  *
  * @package cactus
  */
+header("HTTP/1.0 404 Not Found");
 
 get_header(); ?>
 <!--body content-->

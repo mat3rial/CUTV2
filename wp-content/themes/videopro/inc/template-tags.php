@@ -583,50 +583,53 @@ function videopro_get_global_wl_options_style(){
 	return $videopro_wl_options_style;
 }
 
-function videopro_global_blog_layout(){
-	global $videopro_blog_layout;
-	if(isset($videopro_blog_layout) && $videopro_blog_layout != ''){
-		return $videopro_blog_layout;
-	}
-	$videopro_blog_layout = '';
-	if(is_category()){
-		$category                       = get_category(get_query_var('cat'));
-		$videopro_blog_layout = get_option('cat_layout_' . $category->term_id);
-	}
-	if($videopro_blog_layout == ''){
-		$videopro_blog_layout = ot_get_option('blog_layout', 'layout_1');
-	}
-	return $videopro_blog_layout;
+function videopro_global_blog_layout()
+{
+    global $videopro_blog_layout;
+    if (isset($videopro_blog_layout) && $videopro_blog_layout != '') {
+        return $videopro_blog_layout;
+    }
+    $videopro_blog_layout = '';
+    if (is_category()) {
+        $category = get_category(get_query_var('cat'));
+        $videopro_blog_layout = get_option('cat_layout_' . $category->term_id);
+    }
+    if ($videopro_blog_layout == '') {
+        $videopro_blog_layout = ot_get_option('blog_layout', 'layout_1');
+    }
+    return $videopro_blog_layout;
 }
 
-function videopro_global_bloglist_sidebar(){
-	global $videopro_blog_sidebar;
-	if(isset($videopro_blog_sidebar) && $videopro_blog_sidebar != ''){
-		return $videopro_blog_sidebar;
-	}
-	$videopro_blog_sidebar = '';
-	if(is_category()){
-		$category                       = get_category(get_query_var('cat'));
-		$videopro_blog_sidebar                = get_option('cat_sidebar_' . $category->term_id);
-	}
-	if($videopro_blog_sidebar == ''){
-		$videopro_blog_sidebar = ot_get_option('blog_sidebar','both');
-	}
+function videopro_global_bloglist_sidebar()
+{
+    global $videopro_blog_sidebar;
+    if (isset($videopro_blog_sidebar) && $videopro_blog_sidebar != '') {
+        return $videopro_blog_sidebar;
+    }
+    $videopro_blog_sidebar = '';
+    if (is_category()) {
+        $category = get_category(get_query_var('cat'));
+        $videopro_blog_sidebar = get_option('cat_sidebar_' . $category->term_id);
+    }
+    if ($videopro_blog_sidebar == '') {
+        $videopro_blog_sidebar = ot_get_option('blog_sidebar', 'both');
+    }
 
-	return apply_filters('videopro-main-blog-sidebar', $videopro_blog_sidebar);
+    return apply_filters('videopro-main-blog-sidebar', $videopro_blog_sidebar);
 }
 
-function videopro_global_video_sidebar(){
-	global $videopro_post_sidebar;
-	if(isset($videopro_post_sidebar) && $videopro_post_sidebar != ''){
-		return $videopro_post_sidebar;
-	}
-	$videopro_post_sidebar = get_post_meta(get_the_ID(),'post_sidebar',true);
-	if(!$videopro_post_sidebar){
-		$videopro_post_sidebar = ot_get_option('post_sidebar','both');
-	}
+function videopro_global_video_sidebar()
+{
+    global $videopro_post_sidebar;
+    if (isset($videopro_post_sidebar) && $videopro_post_sidebar != '') {
+        return $videopro_post_sidebar;
+    }
+    $videopro_post_sidebar = get_post_meta(get_the_ID(), 'post_sidebar', true);
+    if (!$videopro_post_sidebar) {
+        $videopro_post_sidebar = ot_get_option('post_sidebar', 'both');
+    }
 
-	return $videopro_post_sidebar;
+    return $videopro_post_sidebar;
 }
 
 /**

@@ -317,7 +317,19 @@ function videopro_scripts() {
         wp_enqueue_style( 'videopro-membership', get_template_directory_uri() . '/css/membership.css');
     }
 
-    if(ot_get_option('body_schema', 'light') == 'dark'){
+    $schema = 'light';
+    if (is_page_template('page-templates/front-page.php')) {
+        $page_schema = get_post_meta(get_the_ID(), 'body_schema', true);
+        if (isset($schema) && $schema != '') {
+            $schema = $page_schema;
+        } else {
+            $schema = ot_get_option('body_schema', 'light');
+        }
+    } else {
+        $schema = ot_get_option('body_schema', 'light');
+    }
+
+    if($schema == 'dark'){
         wp_enqueue_style( 'videopro-dark-style', get_template_directory_uri() . '/css/dark.css', array('videopro-style'));
     }
 
